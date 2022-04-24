@@ -1,0 +1,453 @@
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: Monserat, sans-serif; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* mini phone */
+
+@media only screen and (max-width:320px) {
+    header .overlay {
+        display: none;
+    }
+    #video {
+        display: none;
+    }
+    header {
+        height: 100vh;
+        background: url(../Images/phone-banner.jpg) no-repeat center center /cover;
+    }
+    .service-card {
+        margin: 0px;
+        padding: 2%;
+    }
+}
+
+
+/*  phone    */
+
+@media only screen and (min-width:320px) and (max-width:766px) {
+    header .overlay {
+        display: none;
+    }
+    #video {
+        display: none;
+    }
+    header {
+        height: 100vh;
+        background: url(../Images/phone-banner.jpg) no-repeat center center /cover;
+    }
+    .service-card {
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+
+/*  tablette    */
+
+@media only screen and (min-width:766px) and (max-width:988px) {
+    header .overlay {
+        display: none;
+    }
+    #video {
+        display: none;
+    }
+    header {
+        height: 100vh;
+        background: url(../Images/phone-banner.jpg) no-repeat center center /cover;
+    }
+    .service-card {
+        margin: 0px;
+        padding: 2%;
+    }
+}
+
+
+/* header */
+
+header {
+    height: 100vh;
+    background: url(../Images/light-bulbs-5488573_1920.jpg) no-repeat center center /cover;
+}
+
+header .overlay {
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(1, 1, 1, 0));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1366px;
+    height: 660px;
+    z-index: 1;
+    opacity: 1;
+}
+
+#video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+/* nav bar */
+
+#logo {
+    left: 100%;
+}
+
+.nav-menu {
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .5));
+    padding: 30px;
+    transition: all .7s;
+}
+
+.menu-item {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: white;
+    transition: color .5s;
+}
+
+.menu-item:hover {
+    color: tomato;
+}
+
+.nav-active {
+    color: yellowgreen;
+}
+
+.line1,
+.line2,
+.line3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    transition: all .4s;
+}
+
+.change .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .line2 {
+    opacity: 0;
+}
+
+.change .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.custom-navbar {
+    padding: 5px 30px;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9));
+}
+
+
+/* banner */
+
+.banner {
+    /* background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .0));  */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+@keyframes anim1 {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.banner-heading {
+    animation-name: anim1;
+    animation-duration: 2s;
+}
+
+.banner-par {
+    display: inline-block;
+    animation-name: anim1;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-fill-mode: backwards;
+}
+
+.undeline {
+    width: 150px;
+    border: 3px solid #eee;
+    margin: auto;
+}
+
+.anim2_fromleft {
+    animation-name: anim2_fromleft;
+    animation-duration: 3s;
+}
+
+.anim2_fromright {
+    animation-name: anim2_fromright;
+    animation-duration: 3s;
+}
+
+@keyframes anim2_fromleft {
+    0% {
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes anim2_fromright {
+    0% {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.img-plan {
+    width: 650px;
+    transition: all .3s ease-in-out;
+}
+
+.img-plan-petit {
+    width: 0px;
+    transition: all .3s ease-in-out;
+}
+
+
+/* nos services et programme*/
+
+.notification {
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.img-carossel {
+    border-radius: 50%;
+}
+
+.indicator-carosel {
+    z-index: 2;
+}
+.service-bg{
+    background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0)),
+    url(../Images/geometric-1732847_1920.jpg) no-repeat center /cover;
+    background-attachment: fixed;
+}
+
+/* pour la pub */
+
+#offres {
+    background: linear-gradient(white, rgba(0, 0, 0, .5)),
+    url(../Images/software-developer-6521720_1920.jpg) no-repeat center /cover;
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+
+/* display 3 */
+
+@media (min-width: 768px) {
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(33.333%);
+        transition: all 1s;
+    }
+    .carousel-inner .carousel-item-left.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-33.333%);
+        transition: all 1s;
+    }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+
+/*fin de pub */
+
+.service-card {
+    margin: 20px;
+    padding: 2%;
+}
+
+.bg-img1 {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .6)), url("../Images/steinbach-56641_1280.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px;
+    transition: all .3s ease;
+}
+
+div.bg-img1:hover {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url("../Images/steinbach-56641_1280.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all .3s ease;
+}
+
+.bg-img2 {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .6)), url("../Images/conference-room-768441_1280.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px;
+    color: rgba(255, 255, 255, 1);
+    transition: all .3s ease;
+}
+
+div.bg-img2:hover {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url("../Images/conference-room-768441_1280.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 1);
+    transition: all .3s ease;
+}
+
+.bg-img3 {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)), url("../Images/ottawa-3133050_1280.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px;
+    color: rgba(255, 255, 255, 1);
+    transition: all .3s ease;
+}
+
+div.bg-img3:hover {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url("../Images/ottawa-3133050_1280.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 1);
+    transition: all .3s ease;
+}
+
+.bg-img4 {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)), url("../Images/corporate-863694_1280.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px;
+    color: rgba(255, 255, 255, 1);
+    transition: all .3s ease;
+}
+
+div.bg-img4:hover {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url("../Images/corporate-863694_1280.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 1);
+    transition: all .3s ease;
+}
+
+.mission-text {
+    border: 1px solid gray;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(126, 14, 14, 0.9051995798319328) 100%, rgba(0, 0, 0, 1) 100%);
+    background-size: cover;
+}
+
+.bg-transparent {
+    background: rgba(red, green, blue, 0);
+}
+
+li.active {
+    opacity: 0;
+}
+
+img.hover:hover {
+    filter: brightness(1.75);
+}
+
+img.hover-2:hover {
+    filter: grayscale(50%);
+}
+
+
+/* map and contact */
+
+.map-container-6 {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-container-6 iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+/* footer */
+
+.footer-link {
+    color: #eee;
+    font-size: 13px;
+    transition: all .3s;
+}
+
+.footer-link:hover {
+    color: #70ae2d;
+    text-decoration: none;
+}
+
+#copyright {
+    margin-top: 3px;
+}
